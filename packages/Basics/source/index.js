@@ -1,6 +1,8 @@
-import { getUsers } from "./util/api";
+import moment from "moment";
 import "./index.css";
 import "./index.scss";
+const getUserModule = () =>
+  import(/* webpackChunkName: "userAPI"  */ "./util/api");
 
 console.log("Hello webpack!");
 
@@ -10,4 +12,10 @@ const fancyFunc = () => {
 
 const [a, b] = fancyFunc();
 
-getUsers().then((json) => console.log(json));
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", () => {
+  getUserModule().then(({ getUsers }) => {
+    getUsers().then((json) => console.log(json));
+  });
+});

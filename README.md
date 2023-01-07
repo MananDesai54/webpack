@@ -48,3 +48,27 @@ webpack makes a joy working with ES modules and modularized code.
   - scope hoisting with ModuleConcatenationPlugin
 
 - It also set process.env.NODE_ENV to "production". This environment variable is useful for doing things conditionally in production or in development.
+
+- Code splitting with webpack
+
+  - avoid big bundles
+  - avoid dependencies duplication
+  - There is a limit that the webpack community considers the maximum size for the initial bundle of an application: 200KB. To understand why keeping bundles small is paramount, search for "The Cost of JavaScript" on Google.
+
+- There are three main ways to activate code splitting in webpack:
+
+  - with multiple entry points
+  - with optimization.splitChunks
+  - with dynamic imports
+
+- Code splitting with optimization.splitChunks
+
+  - With optimization.splitChunks we can move out library or code from the main bundle.
+
+- A more powerful technique for code splitting uses dynamic imports to load code conditionally.
+  - Code splitting might be used:
+    - at the module level
+    - at the route level
+    - ES modules are static, meaning we cannot change imports at runtime.
+    - With a dynamic import instead we can choose when to load our code
+    - By prefixing the import path with /_ webpackChunkName: "name_here" _/ we can also control the chunk name

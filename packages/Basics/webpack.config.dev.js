@@ -25,6 +25,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "build"),
   },
+  optimization: {
+    splitChunks: { chunks: "all" },
+  },
   module: {
     rules: [cssLoader(), scssLoader(), babelLoader()],
   },
