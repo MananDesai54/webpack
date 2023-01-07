@@ -1,0 +1,17 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "Webpack",
+  "main": "index.js",
+  "repository": "https://github.com/MananDesai54/webpack.git",
+  "author": "Manan Desai",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "basic-build": "yarn --cwd packages/Basics build",
+    "basic-serve": "yarn --cwd packages/Basics serve"
+  }
+}
