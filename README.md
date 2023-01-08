@@ -18,6 +18,9 @@ All About [Webpack](https://www.valentinog.com/blog/webpack/)
 - Output
 - Loaders
 - Plugins
+  - Two Types
+  - Resolve Plugin => Change behaviour of how webpack will resolve modules (import statement)
+  - normal plugins => to decorate webpack's process of bundling
 - Mode
 - Code Splitting and Lazy loading
 - A piece of code that's splits becomes a chunk.
