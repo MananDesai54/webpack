@@ -66,9 +66,12 @@ webpack makes a joy working with ES modules and modularized code.
   - With optimization.splitChunks we can move out library or code from the main bundle.
 
 - A more powerful technique for code splitting uses dynamic imports to load code conditionally.
+
   - Code splitting might be used:
     - at the module level
     - at the route level
     - ES modules are static, meaning we cannot change imports at runtime.
     - With a dynamic import instead we can choose when to load our code
     - By prefixing the import path with /_ webpackChunkName: "name_here" _/ we can also control the chunk name
+
+- [ModuleScopePlugin](https://stackoverflow.com/questions/44114436/the-create-react-app-imports-restriction-outside-of-src-directory)
