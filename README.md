@@ -75,3 +75,4 @@ webpack makes a joy working with ES modules and modularized code.
     - By prefixing the import path with /_ webpackChunkName: "name_here" _/ we can also control the chunk name
 
 - [ModuleScopePlugin](https://stackoverflow.com/questions/44114436/the-create-react-app-imports-restriction-outside-of-src-directory)
+- webpack.DefinePlugin
